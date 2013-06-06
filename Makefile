@@ -19,9 +19,9 @@ CFLAGS =            -O3 -Wall -pedantic -DNDEBUG
 CJSON_CFLAGS =      -fpic
 CJSON_LDFLAGS =     -shared
 LUA_INCLUDE_DIR =   $(PREFIX)/include/lua5.1
-LUA_CMODULE_DIR =   $(PREFIX)/lib/lua/$(LUA_VERSION)
-LUA_MODULE_DIR =    $(PREFIX)/share/lua/$(LUA_VERSION)
-LUA_BIN_DIR =       $(PREFIX)/bin
+LUA_CMODULE_DIR =   $(PREFIX)/local/lib/lua/$(LUA_VERSION)
+LUA_MODULE_DIR =    $(PREFIX)/local/share/lua/$(LUA_VERSION)
+LUA_BIN_DIR =       $(PREFIX)/local/bin
 
 ##### Platform overrides #####
 ##
