@@ -591,13 +591,13 @@ static void json_append_number(lua_State *l, json_config_t *cfg,
 
     if (cfg->encode_invalid_numbers == 0) {
         /* Prevent encoding invalid numbers */
-        if (isinf(num) || isnan(num))
-            json_encode_exception(l, cfg, json, lindex, "must not be NaN or Inf");
+        //if (isinf(num) || isnan(num))
+        //    json_encode_exception(l, cfg, json, lindex, "must not be NaN or Inf");
     } else if (cfg->encode_invalid_numbers == 1) {
         /* Encode invalid numbers, but handle "nan" separately
          * since some platforms may encode as "-nan". */
         if (isnan(num)) {
-            strbuf_append_mem(json, "nan", 3);
+            strbuf_append_mem(json, "NaN", 3);
             return;
         }
     } else {
